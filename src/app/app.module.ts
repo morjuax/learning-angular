@@ -6,6 +6,7 @@ import { MyComponentComponent } from './components/my-component/my-component.com
 import { PeliculasComponent } from './components/peliculas/peliculas.component';
 import { PruebasComponent } from './components/pruebas/pruebas.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HeaderComponent } from './components/header/header.component';
     MyComponentComponent,
     PeliculasComponent,
     PruebasComponent,
-    HeaderComponent
+    HeaderComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule
