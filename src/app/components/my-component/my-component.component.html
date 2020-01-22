@@ -1,0 +1,13 @@
+<p>my-component works!</p>
+<ul>
+  <li>{{ title }}</li>
+  <li>{{ comment }}</li>
+  <li>{{ year }}</li>
+</ul>
+<hr/>
+<button (click) = "hideMovies()">Hide Movies</button>
+<div *ngIf="showMovies">
+  <Peliculas></Peliculas>
+</div>
+<hr/>
+<Pruebas></Pruebas>
