@@ -18,7 +18,8 @@ const appRoutes: Routes = [
   { path: 'blog', component: BlogComponent },
   { path: 'form', component: FormComponent },
   { path: 'movies', component: PeliculasComponent },
-  { path: 'page', component: PageComponent },
+  { path: 'page', component: PageComponent }, // optional
+  { path: 'page/:name', component: PageComponent },
   { path: '**', component: ErrorComponent },
 ];
 
