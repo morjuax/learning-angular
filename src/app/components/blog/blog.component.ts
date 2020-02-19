@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
+  titleSlider = 'Blog';
+  constructor() {
 
-  constructor() { }
+  }
 
   ngOnInit() {
   }

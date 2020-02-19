@@ -1,6 +1,15 @@
-<h1 class="subheader">Page test</h1>
-<div *ngIf="name">
-  <h2> with variable name : {{ name }}</h2>
-</div>
+<Slider [titleSlider]="titleSlider"></Slider>
+<div class="center">
+  <section id="content">
+    <h1 class="subheader">Page test</h1>
+    <div *ngIf="name; else noHayParametros">
+      <h2>with variable name : {{ name }}</h2>
+    </div>
+    <ng-template #noHayParametros>
+      <h2>No hay parametros por la url</h2>
+    </ng-template>
 
-<button (click)="customRedirect()">Go to form</button>
+    <button (click)="customRedirect()">Go to form</button>
+  </section>
+  <Sidebar></Sidebar>
+</div>

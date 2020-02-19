@@ -8,7 +8,7 @@ import { Router, ActivatedRoute, Params } from "@angular/router";
 })
 export class PageComponent implements OnInit {
   public name: string;
-
+  titleSlider = "Pagina 1"
   constructor(private router: Router, private activedRoute: ActivatedRoute) {}
 
   ngOnInit() {
