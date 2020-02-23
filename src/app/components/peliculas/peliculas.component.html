@@ -1,9 +1,16 @@
 <Slider [titleSlider]="titleSlider" [size]="'small'"></Slider>
 <div class="center">
   <section id="content">
+    <div id="favorite" *ngIf="movieFavorite">
+      <h2 class="subheader">
+        Pelicula Favorita
+      </h2>
+      <h4>{{ movieFavorite.title }}</h4>
+
+    </div>
     <h1 class="subheader">Peliculas</h1>
 
-    <h2>{{ title }}</h2>
+    <!-- <h2>{{ title }}</h2>
 
     <button (click)="changeTitle()">Pulsame</button>
     <hr />
@@ -23,23 +30,12 @@
 
     <hr />
     <h2 class="subheader">Listado de Pelicuas</h2>
+    -->
     <div id="articles" *ngIf="movies">
-      <article class="article-item" *ngFor="let movie of movies; let i = index">
-        <div class="image-wrap">
-          <img src="{{ movie.image }}" alt="" />
-        </div>
-        <h2>{{ i + 1 }} - {{ movie.title }}</h2>
-        <div
-          class="date"
-          [ngClass]="{
-            'year-green': movie.year > 2016,
-            'year-red': movie.year < 2016
-          }"
-        >
-          {{ movie.year }}
-        </div>
-        <div class="clearfix"></div>
-      </article>
+      <div *ngFor="let movie of movies; let i = index">
+        <app-pelicula (movieFavorite)="showMovieFavorite($event)"  [movie]="movie" [i]="i"></app-pelicula>
+      </div>
+
     </div>
   </section>
   <Sidebar></Sidebar>

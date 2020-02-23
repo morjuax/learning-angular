@@ -10,6 +10,7 @@ export class PeliculasComponent implements OnInit, DoCheck, OnDestroy {
   public title: string;
   public movies: Array<Pelicula>;
   titleSlider = 'Peliculas';
+  public movieFavorite: Pelicula;
 
   constructor() {
     this.title = 'Title Movies 2';
@@ -57,5 +58,10 @@ export class PeliculasComponent implements OnInit, DoCheck, OnDestroy {
 
   ngOnDestroy() {
     console.log("the component is to be removed");
+  }
+
+  showMovieFavorite(event){
+    console.log(event);
+    this.movieFavorite = event.movie;
   }
 }
